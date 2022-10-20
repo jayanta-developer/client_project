@@ -470,20 +470,36 @@ const tours = [
 ]
 const client = [
   {
-    "id": "1",
-    "name": "Jonas Schmedtmann",
-    "email": "admin@natours.io",
-    "role": "admin",
-    "active": true,
-    "photo": "user-1.jpg",
+    id: "1",
+    name: "Jonas Schmedtmann",
+    email: "admin@natours.io",
+    role: "admin",
+    active: true,
+    photo: "user-1.jpg",
   },
   {
-    "id": "2",
-    "name": "Lourdes Browning",
-    "email": "loulou@example.com",
-    "role": "user",
-    "active": true,
-    "photo": "user-2.jpg",
+    d: "2",
+    name: "Lourdes Browning",
+    email: "loulou@example.com",
+    role: "user",
+    active: true,
+    photo: "user-2.jpg",
+  },
+  {
+    id: "3",
+    name: "Lourdes Browning",
+    email: "loulou@example.com",
+    role: "user",
+    active: true,
+    photo: "user-2.jpg",
+  },
+  {
+    id: "4",
+    name: "Jennifer Hardy",
+    email: "jennifer@example.com",
+    role: "guide",
+    active: true,
+    photo: "user-6.jpg",
   }
 ]
 
@@ -669,3 +685,5 @@ const client0 = [
     "password": "$2a$12$uA9FsDw63v6dkJKGlLQ/8ufYBs8euB7kqIQewyYlZXU5azEKeLEky"
   }
 ]
+
+module.exports = { tours, client }

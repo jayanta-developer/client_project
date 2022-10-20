@@ -1,4 +1,4 @@
-const { client, tours } = require("../data");
+const { client, tours } = require("../data.js");
 
 const {
   GraphQLObjectType,
@@ -29,7 +29,7 @@ const RootQuery = new GraphQLObjectType({
       type: ClientType,
       args: { id: { type: GraphQLID } },
       resolve(parent, args) {
-        return client.find((client) => client._id === args.id);
+        return client.find((client) => client.id === args.id);
       },
     },
   },
