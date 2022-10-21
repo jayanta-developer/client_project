@@ -1,30 +1,30 @@
 const tours = [
   {
-    "startLocation": {
+    startLocation: {
       "description": "Miami, USA",
       "type": "Point",
       "coordinates": [-80.185942, 25.774772],
       "address": "301 Biscayne Blvd, Miami, FL 33132, USA"
     },
-    "ratingsAverage": 4.8,
-    "ratingsQuantity": 6,
-    "images": ["tour-2-1.jpg", "tour-2-2.jpg", "tour-2-3.jpg"],
-    "startDates": [
+    ratingsAverage: 4.8,
+    ratingsQuantity: 6,
+    images: ["tour-2-1.jpg", "tour-2-2.jpg", "tour-2-3.jpg"],
+    startDates: [
       "2021-06-19T09:00:00.000Z",
       "2021-07-20T09:00:00.000Z",
       "2021-08-18T09:00:00.000Z"
     ],
-    "_id": "5c88fa8cf4afda39709c2955",
-    "name": "The Sea Explorer",
-    "duration": 7,
-    "maxGroupSize": 15,
-    "difficulty": "medium",
-    "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a1f4e2f8fb814b56fa185"],
-    "price": 497,
-    "summary": "Exploring the jaw-dropping US east coast by foot and by boat",
-    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "imageCover": "tour-2-cover.jpg",
-    "locations": [
+    id: 1,
+    name: "The Sea Explorer",
+    duration: 7,
+    maxGroupSize: 15,
+    difficulty: "medium",
+    guides: ["5c8a22c62f8fb814b56fa18b", "5c8a1f4e2f8fb814b56fa185"],
+    price: 497,
+    summary: "Exploring the jaw-dropping US east coast by foot and by boat",
+    description: "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    imageCover: "tour-2-cover.jpg",
+    locations: [
       {
         "_id": "5c88fa8cf4afda39709c2959",
         "description": "Lummus Park Beach",
@@ -56,35 +56,35 @@ const tours = [
     ]
   },
   {
-    "startLocation": {
+    startLocation: {
       "description": "Banff, CAN",
       "type": "Point",
       "coordinates": [-115.570154, 51.178456],
       "address": "224 Banff Ave, Banff, AB, Canada"
     },
-    "ratingsAverage": 5,
-    "ratingsQuantity": 9,
-    "images": ["tour-1-1.jpg", "tour-1-2.jpg", "tour-1-3.jpg"],
-    "startDates": [
+    ratingsAverage: 5,
+    ratingsQuantity: 9,
+    images: ["tour-1-1.jpg", "tour-1-2.jpg", "tour-1-3.jpg"],
+    startDates: [
       "2021-04-25T09:00:00.000Z",
       "2021-07-20T09:00:00.000Z",
       "2021-10-05T09:00:00.000Z"
     ],
-    "_id": "5c88fa8cf4afda39709c2951",
-    "name": "The Forest Hiker",
-    "duration": 5,
-    "maxGroupSize": 25,
-    "difficulty": "easy",
-    "guides": [
+    id: 2,
+    name: "The Forest Hiker",
+    duration: 5,
+    maxGroupSize: 25,
+    difficulty: "easy",
+    guides: [
       "5c8a21d02f8fb814b56fa189",
       "5c8a201e2f8fb814b56fa186",
       "5c8a1f292f8fb814b56fa184"
     ],
-    "price": 397,
-    "summary": "Breathtaking hike through the Canadian Banff National Park",
-    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "imageCover": "tour-1-cover.jpg",
-    "locations": [
+    price: 397,
+    summary: "Breathtaking hike through the Canadian Banff National Park",
+    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    imageCover: "tour-1-cover.jpg",
+    locations: [
       {
         "_id": "5c88fa8cf4afda39709c2954",
         "description": "Banff National Park",
@@ -468,77 +468,43 @@ const tours = [
     ]
   }
 ]
+
 const client = [
   {
-    id: "1",
+    id: "5c8a1d5b0190b214360dc057",
     name: "Jonas Schmedtmann",
     email: "admin@natours.io",
     role: "admin",
-    active: true,
+   active: true,
     photo: "user-1.jpg",
+    password: "$2a$12$Q0grHjH9PXc6SxivC8m12.2mZJ9BbKcgFpwSG4Y1ZEII8HJVzWeyS"
   },
   {
-    d: "2",
+    id: "5c8a1dfa2f8fb814b56fa181",
     name: "Lourdes Browning",
     email: "loulou@example.com",
     role: "user",
     active: true,
     photo: "user-2.jpg",
+    password: "$2a$12$hP1h2pnNp7wgyZNRwPsOTeZuNzWBv7vHmsR3DT/OaPSUBQT.y0S.."
   },
   {
-    id: "3",
-    name: "Lourdes Browning",
-    email: "loulou@example.com",
+    _id: "5c8a1e1a2f8fb814b56fa182",
+    name: "Sophie Louise Hart",
+    email: "sophie@example.com",
     role: "user",
     active: true,
-    photo: "user-2.jpg",
+    photo: "user-3.jpg",
+    password: "$2a$12$9nFqToiTmjgfFVJiQvjmreLt4k8X4gGYCETGapSZOb2hHa55t0dDq"
   },
   {
-    id: "4",
-    name: "Jennifer Hardy",
-    email: "jennifer@example.com",
-    role: "guide",
+    _id: "5c8a1ec62f8fb814b56fa183",
+    name: "Ayla Cornell",
+    email: "ayls@example.com",
+    role: "user",
     active: true,
-    photo: "user-6.jpg",
-  }
-]
-
-const client0 = [
-  {
-    "_id": "5c8a1d5b0190b214360dc057",
-    "name": "Jonas Schmedtmann",
-    "email": "admin@natours.io",
-    "role": "admin",
-    "active": true,
-    "photo": "user-1.jpg",
-    "password": "$2a$12$Q0grHjH9PXc6SxivC8m12.2mZJ9BbKcgFpwSG4Y1ZEII8HJVzWeyS"
-  },
-  {
-    "_id": "5c8a1dfa2f8fb814b56fa181",
-    "name": "Lourdes Browning",
-    "email": "loulou@example.com",
-    "role": "user",
-    "active": true,
-    "photo": "user-2.jpg",
-    "password": "$2a$12$hP1h2pnNp7wgyZNRwPsOTeZuNzWBv7vHmsR3DT/OaPSUBQT.y0S.."
-  },
-  {
-    "_id": "5c8a1e1a2f8fb814b56fa182",
-    "name": "Sophie Louise Hart",
-    "email": "sophie@example.com",
-    "role": "user",
-    "active": true,
-    "photo": "user-3.jpg",
-    "password": "$2a$12$9nFqToiTmjgfFVJiQvjmreLt4k8X4gGYCETGapSZOb2hHa55t0dDq"
-  },
-  {
-    "_id": "5c8a1ec62f8fb814b56fa183",
-    "name": "Ayla Cornell",
-    "email": "ayls@example.com",
-    "role": "user",
-    "active": true,
-    "photo": "user-4.jpg",
-    "password": "$2a$12$tm33.M/4pfEbZF64WbFuHuVFv85v4qEhi.ik8njbud7yaoqCZpjiy"
+    photo: "user-4.jpg",
+    password: "$2a$12$tm33.M/4pfEbZF64WbFuHuVFv85v4qEhi.ik8njbud7yaoqCZpjiy"
   },
   {
     "_id": "5c8a1f292f8fb814b56fa184",
