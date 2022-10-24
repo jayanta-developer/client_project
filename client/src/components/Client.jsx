@@ -12,7 +12,6 @@ query getClient {
   }
 }
 `;
-
 export default function Client() {
   const { loading, error, data } = useQuery(GET_CLIENT)
   if (loading) return <Spinner />
