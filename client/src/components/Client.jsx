@@ -9,6 +9,8 @@ query getClient {
     name
     email
     role
+    active
+    phone
   }
 }
 `;
@@ -24,6 +26,8 @@ export default function Client() {
         <tr>
           <th>Name</th>
           <th>Email</th>
+          <th>Phone</th>
+          <th>Active</th>
           <th>Role</th>
         </tr>
       </thead>

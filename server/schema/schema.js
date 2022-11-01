@@ -23,8 +23,7 @@ const ClientType = new GraphQLObjectType({
     email: { type: GraphQLString },
     role: { type: GraphQLString },
     active: { type: GraphQLBoolean },
-    photo: { type: GraphQLString },
-    password: { type: GraphQLString },
+    phone: { type: GraphQLString },
   }),
 });
 
@@ -161,7 +160,8 @@ const mutation = new GraphQLObjectType({
         name: { type: GraphQLNonNull(GraphQLString) },
         email: { type: GraphQLNonNull(GraphQLString) },
         phone: { type: GraphQLNonNull(GraphQLString) },
-        role: { type: GraphQLNonNull(GraphQLString) },
+        role: { type: GraphQLString },
+        active: { type: GraphQLBoolean },
       },
       async resolve(parent, args) {
         const client = new Client({
@@ -174,16 +174,59 @@ const mutation = new GraphQLObjectType({
       },
     },
 
-    //Delete Client
+    //Delete Client / by changing active field to false
+
     deleteClient: {
       type: ClientType,
       args: {
         id: { type: GraphQLNonNull(GraphQLID) },
       },
       async resolve(parent, args) {
-        return await Client.findByIdAndRemove(args.id);
+        return await Client.findByIdAndUpdate(
+          args.id,
+          {
+            $set: {
+              active: false,
+            },
+          },
+          { new: true }
+        );
       },
     },
+
+    //Update Client
+    UpdateClient: {
+      type: ClientType,
+      args: {
+        id: { type: GraphQLNonNull(GraphQLID) },
+      },
+      async resolve(parent, args) {
+        return await Client.findByIdAndUpdate(
+          args.id,
+          {
+            $set: {
+              name: String,
+              email: String,
+              phone: String,
+              role: String,
+              active: { type: GraphQLString },
+            },
+          },
+          { new: true }
+        );
+      },
+    },
+
+    //Delete clients
+    // deleteClient: {
+    //   type: ClientType,
+    //   args: {
+    //     id: { type: GraphQLNonNull(GraphQLID) },
+    //   },
+    //   async resolve(parent, args) {
+    //     return await Client.findByIdAndRemove(args.id);
+    //   },
+    // },
   },
 });
 

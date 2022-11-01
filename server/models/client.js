@@ -16,7 +16,12 @@ const ClientSchema = new mongoose.Schema({
     unique: true,
     lowercase: true,
   },
-  phone: String,
+  phone: Number,
+
+  active: {
+    type: Boolean,
+    default: true,
+  },
 
   role: {
     type: String,
