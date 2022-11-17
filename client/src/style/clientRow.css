@@ -1,3 +1,11 @@
+.active {
+  display: block;
+}
+.disable {
+  display: none;
+}
 .clientRow {
-  border: 1px solid slategray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
